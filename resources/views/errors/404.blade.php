@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="e503">
+<html class="e404">
     <head>
         <meta charset="UTF-8">
-        <title>Be right back.</title>
+        <title>Not found.</title>
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>

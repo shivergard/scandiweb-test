@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Riga',
 
     /*
     |--------------------------------------------------------------------------
@@ -140,10 +140,14 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        ScandiWebTest\Providers\AppServiceProvider::class,
+        ScandiWebTest\Providers\EventServiceProvider::class,
+        ScandiWebTest\Providers\RouteServiceProvider::class,
 
+        /**
+         * Package Service Providers...
+         */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
     ],
 
     /*

@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: ScandiWebTest
+        psr4_prefix: ScandiWebTest
         src_path: app

@@ -1,5 +1,13 @@
+# laravel ignores
+/_ide_helper.php
 /vendor
 /node_modules
 Homestead.yaml
 Homestead.json
 .env
+/npm-debug.log
+
+# public folder inores
+/public/js
+/public/images
+/public/css

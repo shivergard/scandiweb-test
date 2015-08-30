@@ -11,11 +11,9 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(ScandiWebTest\Task::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
-        'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'description' => $faker->sentence(rand(1, 10)),
+        'time_spent' => $faker->numberBetween(1, 500)
     ];
 });

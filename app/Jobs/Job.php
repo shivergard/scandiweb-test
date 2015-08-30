@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace ScandiWebTest\Jobs;
 
 use Illuminate\Bus\Queueable;
 
