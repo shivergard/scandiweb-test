@@ -179,7 +179,7 @@ class Paginator extends React.Component {
         // hide paginator if only one page
         if (
             this.props.to === this.props.total
-            && this.props.currPage !== this.props.lastPage
+            && this.props.currPage === 1
         ) {
 
             return <div></div>;

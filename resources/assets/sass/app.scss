@@ -12,6 +12,10 @@ html {
     color: #333333;
     background-color: #ffffff;
 
+    .app {
+      width: 100%;
+    }
+
     h1 {
       font-size: 3em
     }
@@ -55,7 +59,7 @@ html {
 
     .form {
       width: 30%;
-      float: left;
+      float: right;
 
       input {
         height: 20px;

@@ -70,16 +70,16 @@ class TimeLog extends React.Component {
             },
             data: postedData,
             dataType: 'json',
-            success: function(newEntry) {
+            success: function (newEntry) {
 
                 // dear reviewer table is updated not right away, but on ajax response
                 // reason is that timestamp will not be correct on slow connections/servers
-                // on page refres it will change by 1-2 seconds
+                // on page refresh it will change by 1-2 seconds
                 this.updateTable(newEntry);
 
                 toastr.info('Task saved!');
             },
-            error: function() {
+            error: function () {
                 toastr.error('Could not save task!');
             }
         });
@@ -96,14 +96,27 @@ class TimeLog extends React.Component {
 
             // modify data array
             var oldData = this.state.tasks.data;
-            oldData.pop();
             oldData.unshift(newEntry);
 
-            // keep state only update part of object
+            // keep state, only update part of object
             var tasks = _.assign({}, this.state.tasks);
-            tasks.data = oldData;
 
-            this.setState(tasks);
+            if (this.state.tasks.total >= this.state.tasks.per_page) {
+                oldData.pop();
+            }
+
+            if (this.state.tasks.total < this.state.tasks.per_page) {
+                tasks.to = this.state.tasks.to + 1;
+            }
+
+            if(this.state.tasks.total == this.state.tasks.per_page - 1) {
+                tasks.last_page = this.state.tasks.last_page + 1;
+            }
+
+            tasks.data = oldData;
+            tasks.total = this.state.tasks.total + 1;
+
+            this.setState({tasks: tasks});
         } else {
             this.getTasks(this.state.tasks.current_page);
         }
@@ -113,25 +126,28 @@ class TimeLog extends React.Component {
      * Render component
      */
     render() {
+        var data = [];
         if (this.hasData()) {
-            return <div>
-                <div className="results">
-                    <TableSet data={this.state.tasks.data}/>
-                    <Paginator
-                        to={this.state.tasks.to}
-                        total={this.state.tasks.total}
-                        currPage={this.state.tasks.current_page}
-                        lastPage={this.state.tasks.last_page}
-                        onChange={this.getTasks.bind(this)}
-                        />
-                </div>
-                <div className="form">
-                    <Form submitEvent={this.postForm.bind(this)}/>
-                </div>
-            </div>
+            data = <div>
+                <TableSet data={this.state.tasks.data}/>
+                <Paginator
+                    to={this.state.tasks.to}
+                    total={this.state.tasks.total}
+                    currPage={this.state.tasks.current_page}
+                    lastPage={this.state.tasks.last_page}
+                    onChange={this.getTasks.bind(this)}
+                    />
+            </div>;
         }
 
-        return <div></div>
+        return <div>
+            <div className="results">
+                {data}
+            </div>
+            <div className="form">
+                <Form submitEvent={this.postForm.bind(this)}/>
+            </div>
+        </div>
     }
 }
 
