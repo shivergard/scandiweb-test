@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: ScandiWebTest
-        psr4_prefix: ScandiWebTest
-        src_path: app

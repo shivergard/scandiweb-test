@@ -4,6 +4,19 @@ html {
   width: 100%;
   height: 100%;
 
+  &.e405 {
+    background: url(../images/405.jpg) center center no-repeat;
+  }
+  &.e404 {
+    background: url(../images/404.jpg) center center no-repeat;
+  }
+  &.e403 {
+    background: url(../images/403.jpg) center center no-repeat;
+  }
+  &.e503 {
+    background: url(../images/503.jpg) center center no-repeat;
+  }
+
   body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -119,16 +132,6 @@ html {
         border-left-width: 0;
         cursor: pointer;
       }
-    }
-
-    &.e404 {
-      background: url(../images/404.jpg) center center no-repeat;
-    }
-    &.e403 {
-      background: url(../images/403.jpg) center center no-repeat;
-    }
-    &.e503 {
-      background: url(../images/503.jpg) center center no-repeat;
     }
   }
 }

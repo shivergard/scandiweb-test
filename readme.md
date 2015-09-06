@@ -2,9 +2,9 @@
 
 ## Requirements
 
-1) PHP 5.5.9+ (req for laravel)
+1) PHP 5.5.9+ (req for packages)
 
-2) SQLite (you can change project DB to another database, I just did not bother for this set up anything else)
+2) SQLite
 
 3) Node.js, Gulp (installed globally)
 
@@ -12,25 +12,9 @@
 
 1) Clone repo
 
-2) Copy .env.example to .env
+1) run "composer install"
 
-3) run "composer install"
-
-4) run "php artisan migrate" (and "php artisan db:seed" to seed some fake records)
-
-5) "php artisan key:generate"
-
-If something goes wrong with installation, these commands will help:
-
-1) "php artisan key:generate" -- generates app key
-
-2) "php artisan migrate" -- migrates tables
-
-3) "php artisan db:seed" -- seeds inital records
-
-4) "mpm install" -- installs javascript dependecies
-
-5) "gulp" -- compiles javascript, sass and copies cat pictures
+4) run "php vendor/bin/phinx  migrate -e development"
 
 ## Notes
 
@@ -43,3 +27,39 @@ If something goes wrong with installation, these commands will help:
 And you can combine time units: 1 month 2days 3 minutes.
 
 4) I am probably the last person you would choose to design site for you.
+
+
+## Notes on backed "framework" part
+
+For test I created "micro framework" with limited features somewhat inspired by laravel/lumen-framework, silexphp/Silex.
+All "framework" part is located in "framework" dir, I did not extract it to separate package.
+
+Features include:
+
+1) Routing with GET/POST routes (Framework class, wrapped nikic/fast-route)
+
+2) Dependency Injection (Framework class, wrapped php-di/php-di)
+
+3) Middlewares (Middleware class, my implementation)
+
+4) Controllers (Controller class, my implementation)
+
+5) Paginator (ArrayPaginator class, wrapped illuminate/pagination)
+
+6) Responses (Response class, wrapped Symfony Response Classes)
+
+7) Views (View class, wrapped twig/twig)
+
+8) Eloquent ORM (Framework class, wrapped illuminate/database)
+
+9) Migrations (robmorgan/phinx package)
+
+What I skipped:
+
+1) Basically everything on "framework part" that is out of scope of this task
+
+2) Single style of exception handling
+
+3) Configuration, all parameters are suited for demoing task, that's all
+
+4) Left develop dependecies in
