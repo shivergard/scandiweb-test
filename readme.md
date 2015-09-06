@@ -29,7 +29,7 @@ And you can combine time units: 1 month 2days 3 minutes.
 4) I am probably the last person you would choose to design site for you.
 
 
-## Notes on backed "framework" part
+## Notes on backend "framework" part
 
 For test I created "micro framework" with limited features somewhat inspired by laravel/lumen-framework, silexphp/Silex.
 All "framework" part is located in "framework" dir, I did not extract it to separate package.
