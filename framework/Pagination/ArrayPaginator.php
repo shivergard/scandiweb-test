@@ -9,7 +9,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 /**
  * Array data paginator
  *
- * @author Roberts Sukonovs <roberts@efumo.lv>
+ * @author Roberts Sukonovs <roberts.sukonovs@gmail.com>
  * @package Sukonovs\Pagination
  */
 class ArrayPaginator

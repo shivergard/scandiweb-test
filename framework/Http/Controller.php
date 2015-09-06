@@ -5,7 +5,7 @@ namespace Sukonovs\Http;
 /**
  * Abstract controller class
  *
- * @author Roberts Sukonovs <roberts@efumo.lv>
+ * @author Roberts Sukonovs <roberts.sukonovs@gmail.com>
  * @package Sukonovs\Http
  */
 

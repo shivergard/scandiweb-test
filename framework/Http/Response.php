@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Response as BaseResponse;
 /**
  * Response object
  *
- * @author Roberts Sukonovs <roberts@efumo.lv>
+ * @author Roberts Sukonovs <roberts.sukonovs@gmail.com>
  * @package Sukonovs\Http
  */
 class Response

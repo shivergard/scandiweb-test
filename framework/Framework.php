@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Response as BaseResponse;
 /**
  * Framework object
  *
- * @author Roberts Sukonovs <roberts@efumo.lv>
+ * @author Roberts Sukonovs <roberts.sukonovs@gmail.com>
  * @package Sukonovs
  */
 class Framework

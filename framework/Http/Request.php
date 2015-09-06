@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request as BaseRequest;
 /**
  * Request class
  *
- * @author Roberts Sukonovs <roberts@efumo.lv>
+ * @author Roberts Sukonovs <roberts.sukonovs@gmail.com>
  */
 class Request extends BaseRequest
 {

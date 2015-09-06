@@ -9,7 +9,7 @@ use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 /**
  * Var dumper class
  *
- * @author Roberts Sukonovs <roberts@efumo.lv>
+ * @author Roberts Sukonovs <roberts.sukonovs@gmail.com>
  */
 class Dumper
 {

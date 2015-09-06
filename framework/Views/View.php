@@ -5,7 +5,7 @@ use Twig_Environment;
 /**
  * View class
  *
- * @author Roberts Sukonovs <roberts@efumo.lv>
+ * @author Roberts Sukonovs <roberts.sukonovs@gmail.com>
  * @package Sukonovs\Views
  */
 
