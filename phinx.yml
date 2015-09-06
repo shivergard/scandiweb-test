@@ -1,0 +1,7 @@
+paths:
+    migrations: %%PHINX_CONFIG_DIR%%/migrations
+
+environments:
+    development:
+        adapter: sqlite
+        name: ./database.sqlite
