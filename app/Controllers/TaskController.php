@@ -74,7 +74,7 @@ class TaskController extends Controller
     public function store()
     {
         try {
-            $task = Task::create($this->request->all());
+            $task = $this->task->create($this->request->all());
         } catch(PDOException $e) {
 
             return $this->response->internalError();
